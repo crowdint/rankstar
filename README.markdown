@@ -2,7 +2,26 @@
 
 Use this gem to calculate the keyword ranking for *Bing*, *Yahoo* or *Google* as follows:
 
-Rankstar.rank(engine, keyword, url) #=> 1
+    Rankstar.rank(engine, keyword, url) #=> 1
+
+## Install
+
+### Command Line
+
+    gem install rankstar
+  
+### Bundler
+
+On Gemfile:
+
+    gem 'rankstar'
+
+
+### Ruby 2.3.x
+
+On environment.rb
+
+    config.gem 'rankstar'
 
 ## Arguments
 
@@ -20,7 +39,7 @@ By default, it will only look on the first 100 results. You can enter a higher v
 
 Example:
 
-Rankstar.rank(engine, keyword, url, :limit => 200) #=> 123
+    Rankstar.rank(engine, keyword, url, :limit => 200) #=> 123
 
 ## TODO
 
