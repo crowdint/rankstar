@@ -4,25 +4,19 @@ require 'net/http'
 
 class Rankstar
   ENGINES = [:google, :yahoo, :bing]
-  def self.rank(engine, *args)
+  def self.rank(engine, keyword, url, *args)
     validate_engine(engine)
-    validate_options(args[0])
-    args[0].merge({:res_per_page => 200, :limit => 100})
+    args[0].merge({:res_per_page => 100, :limit => 100})
     options = args[0]
 
-    options[:keyword].gsub!(/\s/, '+')
-    request_url, results_selector, cite_selector = prepare_for(engine, options[:keyword], options[:res_per_page])
-    fetch_the_rank(request_url, results_selector, cite_selector, options[:url], options[:limit], options[:res_per_page])
+    keyword.gsub!(/\s/, '+')
+    request_url, results_selector, cite_selector = prepare_for(engine, keyword, options[:res_per_page])
+    fetch_the_rank(request_url, results_selector, cite_selector, url, options[:limit], options[:res_per_page])
   end
 
   private
   def self.validate_engine(engine)
     raise "Allowed engines are: :google, :yahoo, :bing" unless ENGINES.include?(engine)
-  end
-
-  def self.validate_options(options)
-    raise "You should specify a :keyword option" unless options[:keyword]
-    raise "You should specify a :url option" unless options[:url]
   end
 
   def self.prepare_for(engine, keyword, results_per_page)
