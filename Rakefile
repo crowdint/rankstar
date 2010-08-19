@@ -11,6 +11,7 @@ begin
     gem.homepage = "http://github.com/crowdint/rankstar"
     gem.authors = ["Luis Velasco"]
     gem.add_development_dependency "rspec", ">= 1.2.9"
+    gem.add_development_dependency "nokogiri", ">= 1.4"
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
