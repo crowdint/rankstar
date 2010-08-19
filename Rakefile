@@ -4,14 +4,13 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "keyword_ranking"
+    gem.name = "rankstar"
     gem.summary = %Q{Ruby library to get the ranking of a url based on a keyword in Bing, Yahoo or Google}
     gem.description = %Q{Ruby library to get the ranking of a url based on a keyword in Bing, Yahoo or Google}
     gem.email = "luis.velasco@crowdint.com"
-    gem.homepage = "http://github.com/crowdint/keyword_ranking"
+    gem.homepage = "http://github.com/crowdint/rankstar"
     gem.authors = ["Luis Velasco"]
     gem.add_development_dependency "rspec", ">= 1.2.9"
-    # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
