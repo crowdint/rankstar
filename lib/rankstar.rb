@@ -6,8 +6,8 @@ class Rankstar
   ENGINES = [:google, :yahoo, :bing]
   def self.rank(engine, keyword, url, *args)
     validate_engine(engine)
-    args[0].merge({:res_per_page => 100, :limit => 100})
-    options = args[0]
+    options = {:res_per_page => 100, :limit => 100}
+    options.merge!(args[0])
 
     keyword.gsub!(/\s/, '+')
     request_url, results_selector, cite_selector = prepare_for(engine, keyword, options[:res_per_page])

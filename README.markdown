@@ -14,7 +14,7 @@ Rankstar.rank(engine, keyword, url) #=> 1
 
 An integer with the rank of the site.
 
-## Limitations:
+## Limit:
 
 By default, it will only look on the first 100 results. You can enter a higher value by using the :limit option.
 
