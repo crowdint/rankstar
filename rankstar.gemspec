@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.authors = ["Luis Velasco"]
   s.date = %q{2010-08-18}
   s.description = %q{Ruby library to get the ranking of a url based on a keyword in Bing, Yahoo or Google}
-  s.email = %q{luis.velasco@crowdint.com}
+  s.email = %q{luisalberto.velasco@crowdint.com}
   s.extra_rdoc_files = [
     "LICENSE",
      "README.markdown"
