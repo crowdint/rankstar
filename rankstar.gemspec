@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
      "VERSION",
      "keyword_ranking.gemspec",
      "lib/rankstar.rb",
+     "rankstar.gemspec",
      "spec/rankster_spec.rb",
      "spec/spec.opts",
      "spec/spec_helper.rb",
