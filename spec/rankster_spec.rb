@@ -15,7 +15,7 @@ describe Rankstar do
     end
 
     it "returns crowdint as the #1 site on google for www.crowdint.com" do
-      Rankstar.rank(:google, :keyword => 'crowdint', :url => 'www.crowdint.com').should == 1  
+      Rankstar.rank(:google, :keyword => 'crowdint', :url => 'www.crowdint.com', :limit => 300).should == 1  
     end
   end
 end
